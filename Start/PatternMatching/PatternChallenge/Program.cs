@@ -2,9 +2,9 @@
 // C# Pattern Matching programming challenge
 
 // The rules:
-// A Stock trade of 0 shares should be caught and flagged as invalid
-// A Stock trade that is less than $5,000 is a 0.1% commission
-// A Stock trade that is more or equal to $5,000 is a 0.05% commission
+// 👌 A Stock trade of 0 shares should be caught and flagged as invalid
+// 👌A Stock trade that is less than $5,000 is a 0.1% commission
+// 👌A Stock trade that is more or equal to $5,000 is a 0.05% commission
 // Any stock trade of 1,000 shares or more is a flat fee of $10
 // Any Stock trade of 1,000 shares or more with a value of $10,000 or more is a flat fee of $5
 // A Bond trade of 5 years duration is $20, or $15 if the total trade value is $10,000 or more

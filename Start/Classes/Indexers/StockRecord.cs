@@ -2,8 +2,10 @@
 
 // StockRecord is a sample class that returns information about
 // a week's worth of stock information - closing prices, etc.
-public class StockRecord {
-    public string Symbol {
+public class StockRecord
+{
+    public string Symbol
+    {
         get => "ABCD";
     }
 
@@ -12,22 +14,39 @@ public class StockRecord {
     };
 
     // Define some public properties
-    public decimal Average {
+    public decimal Average
+    {
         get => prices.Sum() / prices.Length;
     }
-    public decimal High {
+    public decimal High
+    {
         get => prices.Max();
     }
-    public decimal Low {
+    public decimal Low
+    {
         get => prices.Min();
     }
 
     // TODO: implement Length property 
-
+    public int Length => prices.Length;
 
     // TODO: implement this[] to enable indexing
-
+    public decimal this[int index]
+    {
+        get => prices[index];
+    }
 
     // TODO: You can overload the indexer to provide another way to access
-
+    public decimal this[string day]
+    {
+        get => day switch
+        {
+            "mon" => prices[0],
+            "tue" => prices[1],
+            "wed" => prices[2],
+            "thu" => prices[3],
+            "fri" => prices[4],
+            _ => throw new IndexOutOfRangeException($"{day} is not a valid index to {nameof(StockRecord)}")
+        };
+    }
 }

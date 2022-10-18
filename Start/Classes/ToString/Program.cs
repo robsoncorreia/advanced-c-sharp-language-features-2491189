@@ -5,14 +5,26 @@
 // a base implementation of the ToString method
 float x = 42.0f;
 string str = x.ToString();
-Console.WriteLine($"{str}");
+//Console.WriteLine($"{str}");
 
 // TODO: Implement ToString to represent a custom type
 
-public class Person {
-    public string? FirstName {get; set;}
-    public string? LastName {get; set;}
-    public int Age {get; set;}
+Person p = new Person()
+{
+    FirstName = "John",
+    LastName = "Doe",
+    Age = 25
+};
+
+System.Console.WriteLine($"{p}");
+
+
+public class Person
+{
+    public string? FirstName { get; set; }
+    public string? LastName { get; set; }
+    public int Age { get; set; }
 
     // TODO: Override ToString to provide your own string representation
+    public override string ToString() => $"[Person] FistName:{FirstName}, LastName: {LastName}, Age: {Age}";
 }
